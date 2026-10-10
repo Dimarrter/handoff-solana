@@ -1,0 +1,151 @@
+1
+00:00:00,000 --> 00:00:04,494
+HandOff creates a receipt for the exact version of a project file.
+
+2
+00:00:04,494 --> 00:00:14,451
+It gives project groups and reviewers a question they can answer for themselves: does this file contain the same bytes as the one we handed over.
+
+3
+00:00:14,451 --> 00:00:16,801
+This is a Solana devnet prototype.
+
+4
+00:00:16,801 --> 00:00:19,659
+Consider a familiar project handover.
+
+5
+00:00:19,659 --> 00:00:22,597
+A group exports a report and sends it.
+
+6
+00:00:22,597 --> 00:00:26,804
+A teammate makes another edit and replaces the export.
+
+7
+00:00:26,804 --> 00:00:30,932
+Later, the reviewer asks which version they received.
+
+8
+00:00:30,932 --> 00:00:36,171
+This is an illustrative scenario, not a claim from user interviews.
+
+9
+00:00:36,171 --> 00:00:40,617
+HandOff focuses on checking that specific file handover.
+
+10
+00:00:40,617 --> 00:00:42,556
+The author chooses a file.
+
+11
+00:00:42,556 --> 00:00:49,383
+The browser calculates its SHA two fifty six fingerprint, without uploading the contents.
+
+12
+00:00:49,383 --> 00:00:53,340
+The author shares the file and a small JSON receipt.
+
+13
+00:00:53,340 --> 00:00:57,064
+The reviewer imports both and compares the bytes.
+
+14
+00:00:57,064 --> 00:01:01,796
+This actual application screen shows a matching local receipt.
+
+15
+00:01:01,796 --> 00:01:04,977
+It does not claim a blockchain timestamp.
+
+16
+00:01:04,977 --> 00:01:13,754
+For a public record, a wallet signs a Solana devnet transaction containing the versioned fingerprint in the existing Memo program.
+
+17
+00:01:13,754 --> 00:01:18,856
+The application confirms the transaction before attaching it to the receipt.
+
+18
+00:01:18,856 --> 00:01:24,980
+A reviewer independently checks transaction success, the exact memo and the signing wallet.
+
+19
+00:01:24,980 --> 00:01:29,402
+The filename and local creation date remain convenience metadata.
+
+20
+00:01:29,402 --> 00:01:32,567
+Changing the contents changes the fingerprint.
+
+21
+00:01:32,567 --> 00:01:37,772
+In this actual browser test, the edited file no longer matches the receipt.
+
+22
+00:01:37,772 --> 00:01:41,571
+Renaming the same file does not change its fingerprint.
+
+23
+00:01:41,571 --> 00:01:49,308
+This gives the reviewer a repeatable check instead of relying on a filename or a screenshot of a chat message.
+
+24
+00:01:49,308 --> 00:01:54,545
+The first proposed users are student project groups and course reviewers.
+
+25
+00:01:54,545 --> 00:01:58,763
+Core receipts and independent verification can remain free.
+
+26
+00:01:58,763 --> 00:02:04,000
+A future paid workspace could add batch review and a cohort handover log.
+
+27
+00:02:04,000 --> 00:02:08,218
+The first pilot would involve ten groups and two reviewers.
+
+28
+00:02:08,218 --> 00:02:13,018
+Demand, repeat usage and willingness to pay still need validation.
+
+29
+00:02:13,018 --> 00:02:22,037
+The local prototype implements hashing, receipt export and import, file comparison, and the devnet wallet transaction flow.
+
+30
+00:02:22,037 --> 00:02:24,328
+Four automated test groups pass.
+
+31
+00:02:24,328 --> 00:02:31,129
+Browser tests cover matching and changed files, including an exported receipt imported again.
+
+32
+00:02:31,129 --> 00:02:40,148
+Before a competition submission, Noah AI integration, a live devnet wallet test and public publication remain to complete.
+
+33
+00:02:40,148 --> 00:02:42,371
+HandOff has a useful boundary.
+
+34
+00:02:42,371 --> 00:02:45,283
+A receipt identifies matching contents.
+
+35
+00:02:45,283 --> 00:02:48,656
+A confirmed memo adds a public wallet record.
+
+36
+00:02:48,656 --> 00:02:54,941
+It does not establish authorship, originality, ownership or a teacher's acceptance.
+
+37
+00:02:54,941 --> 00:02:56,781
+Devnet is a test network.
+
+38
+00:02:56,781 --> 00:03:04,523
+The proposal is a small handover record that travels with the file and lets the next person check it.
